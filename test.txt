@@ -1,0 +1,9 @@
+self-practice/
+├── week01/
+│   ├── [source-code & files]
+│   └── progression01.txt   ← คำอธิบายโจทย์หรือสิ่งที่กำลังฝึกฝนอาจมีได้หลายข้อรวมไว้ใน txt เดียว
+├── week02/
+│   ├── [source-code & files]
+│   └── progression02.txt
+├── ...
+└── progression01-05.txt   ← คำอธิบายภาพรวมของสิ่งที่กำลังฝึกรายสัปดาห์สรุปเป็นสัปดาห์

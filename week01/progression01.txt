@@ -1,0 +1,2 @@
+ใน week 1 นี้ได้ฝึกเกี่ยวกับ เรื่อง Array และ string แล้วก็มีการจัดข้อมูลใน รูปแบบ list
+พวกพื้นฐานของ Array , การเพิ่ม/ลบข้อใน Array , การ loop ใน Array , Spread Operator, Array Destructuring , entries() 

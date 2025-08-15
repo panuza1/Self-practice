@@ -1,0 +1,3 @@
+Shallow equality จะเอา property ของ object ทั้งสอง มา เทียบกัน และ check ว่าค่าใน property เหล่านั้นเท่ากันหรือไม้   
+(shallow equality) คือการที่ key และค่าของ key ในทั้งสอง object มีค่าเท่ากัน 
+

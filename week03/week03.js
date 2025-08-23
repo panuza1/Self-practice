@@ -145,7 +145,7 @@ function countChar(str){
     if (!str) return undefined
     let obj = {}
     let words = str.toLowerCase().split("")
-    for(let i = 0; i < words.length(); i++) {
+    for(let i = 0; i < words.length; i++) {
         if(obj[words[i]] !== undefined){
             obj[words[i]] += 1
         } else {
@@ -172,35 +172,135 @@ console.log(test('Do you best just do it'))
 console.log(reversesWords('Do you best just do it'))
 
 
-// 3.Write a function isPalindrome(str) that checks if a string is a palindrome.
+// 3.Use reduce to find the sum of an array, e.g. [1,2,3,4] → 10.
+const arr = [1,2,3,4]
+const fnsum = arr.reduce((acc, cur) => acc + cur)
+console.log(fnsum) //10 
 
-// Use reduce to find the sum of an array, e.g. [1,2,3,4] → 10.
+// 4.Use reduce to find the product of an array, e.g. [1,2,3,4] → 24.
+const fnproduct = arr.reduce((acc, cur) => acc * cur)
+console.log(fnproduct)  // 24 
 
-// Use reduce to find the product of an array, e.g. [1,2,3,4] → 24.
+// Write a function findMax(arr) that returns the maximum number in an array without using Math.max.   
+function findMax(arr){
+    if(!arr) return undefined
+    let numberofMax = arr[0]
+    for (let i=1; i<arr.length; i++){
+        if (arr[i] > numberofMax){
+            numberofMax = arr[i]
+        }
+    } 
+    return numberofMax
+}
+const arr1 = [1,2,3,4]
+console.log(findMax(arr1))  // 4 
 
-// Write a function findMax(arr) that returns the maximum number in an array without using Math.max.
 
 // Write a function findMin(arr) that returns the minimum number in an array without using Math.min.
+function findMin(arr){
+    if(!arr) return undefined
+    let NumMin = arr[0]
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] < NumMin){
+            NumMin = arr[i]
+        }
+    }
+    return NumMin;
+}
+console.log(findMin(arr1)) // 1
 
 // Use entries() + for...of to get only the even indexes from an array ['h','e','l','l','o'].
 
+arrText = ['h','e','l','l','o']
+for (const [index, value] of arrText.entries()) {
+    console.log(index, value)
+}
+
 // Write a function sumAll(...nums) that returns the sum of all arguments.
 
-// Write a function multiplyAll(...nums) that returns the product of all arguments.
+function sumAll(...nums) {
+    return nums.reduce((acc, cur) => acc + cur, 0)
+}
+console.log(sumAll(1,2,3,4)) // 10 
+
+// Write a function multiplyAll(...nums) that returns the product (*) of all arguments.
+
+function multiplyAll(...nums) {
+    return nums.reduce((acc, cur) => acc * cur)
+}
+console.log(multiplyAll(1,2,3,4))
 
 // Write a function setUpperCase(str) (arrow function) that converts a string to uppercase.
 
+const setUpperCase = (str) => str.toUpperCase();
+let str = "jeng lao mak"
+console.log(setUpperCase(str))
+
 // Write a function greet(name, callback) that passes name to a callback function.
 
+function greet(name, callback){
+    return callback(name);
+}
+
+function sayHello(n) {
+    return "hello" + n
+}
+
+console.log(greet("jeng", sayHello))
+
 // Write a function filterEven(arr) that returns only even numbers from an array.
+function filterEven(arr) {
+    if (!arr) return undefined;
+    let EvenNum = []
+    for (let i=0; i<arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            EvenNum.push(arr[i]);
+        }
+    }
+    return EvenNum
+}
+let arr3 = [1,2,3,4]
+console.log(filterEven(arr3))  // [2, 4]
 
 // Write a function filterOdd(arr) that returns only odd numbers from an array.
 
+function filterOdd(arr) {
+    if (!arr) return undefined;
+    let EvenNum = []
+    for (let i=0; i<arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            EvenNum.push(arr[i]);
+        }
+    }
+    return EvenNum
+}
+console.log(filterOdd(arr3))  // [1,3]
+
 // Write a function double(arr) that uses map to multiply each number in an array by 2.
+
+function double(arr) {
+    return arr.map(num => num * 2)
+}
+console.log(double(arr3))  // [2, 4, 6, 8]
 
 // Write a function countVowels(str) that counts the number of vowels (a, e, i, o, u) in a string.
 
+function countVowels(str) { 
+    if (!str) return 0;
+    const vowels = 'aeiou';
+    return str.toLowerCase()
+    .split('')
+    .filter(char => vowels.includes(char)).length;
+}
+let str1 = "hello";   // have 2 
+console.log(countVowels(str1))  // 2 
+
 // Write a function mergeArrays(arr1, arr2) that merges two arrays using the spread operator.
+
+function mergeArrays(arr1,arr2) {
+    return [...arr1, ...arr2]
+}
+console.log(mergeArrays([3,4],[5,6]))
 
 // Write a function defaultHello(name="Guest") that returns "Hello, name".
 

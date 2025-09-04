@@ -1,0 +1,3 @@
+ได้เรียนรู้การใช้ ฟังก์ชันหลายรูปแบบ, การจัดการ array, string, การใช้ reduce/map/filter, การเขียน algorithm เบื้องต้น (max/min, นับสระ, reverse),
+การใช้ rest/spread, default parameter และ callback function
+

@@ -1,0 +1,7 @@
+ใช้ Array method ได้หลายแบบ (isArray, join, concat, sort).
+
+รู้จัก spread operator (...) สำหรับรวม array.
+
+เข้าใจการ เขียน function ทั้งแบบปกติและ arrow function.
+
+เรียนรู้การเรียงข้อมูลเชิงตัวเลขและตัวอักษร (รวมถึง localeCompare สำหรับภาษา).

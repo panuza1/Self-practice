@@ -140,9 +140,9 @@ console.log("--------------------------------pratice----------------------------
 // 1.Write a function countChar(str) that counts the frequency of each character in a string.
 
 function countChar(str){
-    if (!str) return undefined
     let obj = {}
     let words = str.toLowerCase().split("")
+    if (!str) return undefined
     for(let i = 0; i < words.length; i++) {
         if(obj[words[i]] !== undefined){
             obj[words[i]] += 1

@@ -7,14 +7,11 @@
 // -Function
 // -JS Module
 
-const { json } = require("body-parser");
-const e = require("cors");
-const src = require("debug");
 
 function last(word) {
     console.log(`----------------${word}-----------------`);
 }
-
+module.exports = {last}
 
 
 function addProperty(obj, key, value) {
@@ -243,3 +240,6 @@ function processNumbers(arr) {
 console.log(processNumbers([1, 2, 3, 4]))
 console.log(processNumbers([5, 6, 7, 8]))
 console.log(last("15"))
+
+console.log(last("finnish ja")) 
+
